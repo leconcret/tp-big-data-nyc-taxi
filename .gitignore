@@ -1,0 +1,13 @@
+*.csv
+*.parquet
+*.orc
+*.mp4
+*.avi
+*.mkv
+*.log
+*.pyc
+__pycache__/
+metastore_db/
+derby.log
+raw_parquet/
+csv_data/
