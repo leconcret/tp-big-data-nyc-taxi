@@ -22,7 +22,7 @@ Construire un pipeline Big Data complet :
 
 ## Structure du dépôt
 
-```text
+
 tp-big-data-nyc-taxi/
 ├── README.md
 ├── .gitignore
@@ -58,33 +58,36 @@ Données HDFS :
 
 ```bash
 /user/leconcret/taxi/raw/
-```
+
 
 Résultats HDFS :
 
 ```bash
 /user/leconcret/taxi/processed/
-```
 
 Résultat final local :
 
 ```bash
 ~/tp_hadoop_taxi/results/rapport_final.tsv
-```
+
 
 ## Résultats principaux obtenus
 
-```text
 Nombre total de lignes Hive : 9 177 627
 Pipeline final : 9 177 544 courses
 Recette totale : 171 948 024.9 $
 Créneau le plus rentable : JEUDI-18
 Courses suspectes détectées : 4 156
-```
+
+## Présentation PowerPoint
+
+Le support utilisé pour la démonstration vidéo est disponible dans :
+
+docs/Presentation_TP_BIG_DATA_LIVE_COMMANDES_HADOOP_HIVE.pptx
+
 
 ## Lien vidéo
 À compléter :
 
-```text
-Lien YouTube : ___________________https://www.youtube.com/watch?v=GsyqUfSC0bQ&t=68s___________
-```
+Lien YouTube : https://www.youtube.com/watch?v=GsyqUfSC0bQ&t=68s
+
