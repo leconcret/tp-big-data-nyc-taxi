@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Big Data NYC Taxi</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f9;color:#1f2937}
+header{background:#0f172a;color:white;padding:25px;text-align:center}
+.container{width:94%;margin:25px auto}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-bottom:25px}
+.card,.section{background:white;border-radius:12px;padding:18px;box-shadow:0 2px 7px #0002}
+.card{text-align:center}
+.card h3{font-size:13px;color:#64748b}
+.card strong{font-size:20px;color:#0f172a}
+.section{margin-bottom:25px}
+.download{display:inline-block;background:#2563eb;color:white;padding:10px 14px;border-radius:8px;text-decoration:none;margin-bottom:12px}
+.chart{height:460px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:#e2e8f0;padding:8px}
+td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:center}
+</style>
+</head>
+<body>
+<header>
+<h1>Dashboard Décisionnel — NYC Taxi Trip Records</h1>
+<p>Résultats Hadoop, HDFS, MapReduce, Hive et Python</p>
+</header>
+
+<div class="container">
+<div class="kpis">
+{% for k,v in kpis.items() %}
+<div class="card"><h3>{{k}}</h3><strong>{{v}}</strong></div>
+{% endfor %}
+</div>
+<div class="section">
+<h2>Rapport exécutif PDF</h2>
+<p>Télécharger un rapport PDF complet contenant les KPI, les analyses principales et les tableaux de synthèse.</p>
+<a class="download" href="/export_pdf">Télécharger le rapport PDF</a>
+</div>
+<div class="section">
+<h2>1. Activité par heure</h2>
+<a class="download" href="/download/trips_per_hour">Exporter CSV</a>
+<div id="trips" class="chart"></div>
+{{tables.trips|safe}}
+</div>
+
+<div class="section">
+<h2>2. Zones de départ les plus actives</h2>
+<a class="download" href="/download/revenue_per_zone">Exporter CSV</a>
+<div id="zones" class="chart"></div>
+{{tables.zones|safe}}
+</div>
+
+<div class="section">
+<h2>3. Analyse vitesse / congestion</h2>
+<a class="download" href="/download/speed_analysis">Exporter CSV</a>
+<div id="speed" class="chart"></div>
+{{tables.speed|safe}}
+</div>
+
+<div class="section">
+<h2>4. Créneaux les plus rentables</h2>
+<a class="download" href="/download/peak_revenue">Exporter CSV</a>
+<div id="peak" class="chart"></div>
+{{tables.peak|safe}}
+</div>
+
+<div class="section">
+<h2>5. Synthèse décisionnelle</h2>
+<p>Le dashboard permet au décideur d’identifier les créneaux rentables, les zones prioritaires, les périodes de congestion et les indicateurs clés à exporter.</p>
+<a class="download" href="/download/kpi_summary">Exporter KPI CSV</a>
+</div>
+</div>
+
+<script>
+const charts={{charts|safe}};
+function draw(id,key){ if(charts[key]){let c=JSON.parse(charts[key]); Plotly.newPlot(id,c.data,c.layout);} }
+draw('trips','trips'); draw('zones','zones'); draw('speed','speed'); draw('peak','peak');
+</script>
+</body>
+</html>
