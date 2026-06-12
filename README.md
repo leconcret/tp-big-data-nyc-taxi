@@ -1,93 +1,175 @@
-# TP BIG DATA — Apache Hadoop / NYC Taxi Trip Records
+# NYC Taxi Big Data Analytics Platform
 
-## Présentation
-Ce dépôt accompagne la vidéo de démonstration du TP Big Data réalisé avec Hadoop, HDFS, MapReduce, Hive et Python sur le dataset NYC Taxi Trip Records.
+## Présentation du projet
 
-## Objectif
-Construire un pipeline Big Data complet :
-1. préparation du dataset ;
-2. chargement dans HDFS ;
-3. traitements MapReduce ;
-4. analyses Hive ;
-5. pipeline final End-to-End ;
-6. export et analyse Python.
+Ce projet présente la conception et la mise en œuvre d'une plateforme Big Data décisionnelle basée sur le dataset public NYC Taxi Trip Records 2023.
 
-## Environnement utilisé
-- Windows + WSL Ubuntu
-- Hadoop 3.4.0
-- Hive 4.0.1
-- Python 3
-- Hadoop Streaming
-- HDFS
+L'objectif est de construire une chaîne complète de traitement de données massives permettant de collecter, stocker, traiter, analyser et visualiser plusieurs millions de trajets de taxis new-yorkais.
 
-## Structure du dépôt
+Le projet a été réalisé dans le cadre du Master 1 Bases de Données et Génie Logiciel à l'Université Félix Houphouët-Boigny.
 
+---
 
-tp-big-data-nyc-taxi/
-├── README.md
-├── .gitignore
-├── commands_demo.md
-├── run_mapreduce_commands.sh
-├── hive/
-│   └── queries_hive.sql
-├── scripts/
-│   ├── ex1/
-│   ├── ex2/
-│   ├── ex3/
-│   └── ex5/
-└── results/
-    └── README_results.md
-```
+## Objectifs du projet
 
-## Variables importantes
+- Stocker des données massives dans Hadoop HDFS
+- Réaliser des traitements distribués avec MapReduce
+- Effectuer des analyses décisionnelles avec Apache Hive
+- Produire des indicateurs métier exploitables
+- Développer un dashboard interactif avec Flask et Plotly
+- Générer automatiquement un rapport PDF décisionnel
 
-```bash
-export HDFS_USER=$(whoami)
-export HADOOP_STREAMING_JAR=$HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.4.0.jar
-```
+---
 
-## Chemins utilisés
+## Technologies utilisées
 
-Données locales :
+- Apache Hadoop HDFS
+- MapReduce
+- Apache Hive
+- Python
+- Pandas
+- Flask
+- Plotly
+- ReportLab
+- Linux (WSL Ubuntu)
+- Git & GitHub
 
-```bash
-~/tp_hadoop_taxi/csv_data
-```
+---
 
-Données HDFS :
+## Données utilisées
 
-```bash
-/user/leconcret/taxi/raw/
+Dataset : NYC Taxi Trip Records 2023
 
+Période analysée :
 
-Résultats HDFS :
+- Janvier 2023
+- Février 2023
+- Mars 2023
 
-```bash
-/user/leconcret/taxi/processed/
+Volume traité :
 
-Résultat final local :
+- Plus de 9 millions de trajets
+- Plus de 170 millions USD de recettes analysées
+- Traitement distribué avec Hadoop
 
-```bash
-~/tp_hadoop_taxi/results/rapport_final.tsv
+---
 
+## Architecture du pipeline
 
-## Résultats principaux obtenus
+NYC Taxi Trip Records
 
-Nombre total de lignes Hive : 9 177 627
-Pipeline final : 9 177 544 courses
-Recette totale : 171 948 024.9 $
-Créneau le plus rentable : JEUDI-18
-Courses suspectes détectées : 4 156
+↓
+Hadoop HDFS
 
-## Présentation PowerPoint
+↓
+MapReduce
 
-Le support utilisé pour la démonstration vidéo est disponible dans :
+↓
+Apache Hive
 
-docs/Presentation_TP_BIG_DATA_LIVE_COMMANDES_HADOOP_HIVE.pptx
+↓
+Exports CSV
 
+↓
+Dashboard Flask / Plotly
 
-## Lien vidéo
-À compléter :
+↓
+Rapport PDF décisionnel
 
-Lien YouTube : https://www.youtube.com/watch?v=GsyqUfSC0bQ&t=68s
+Le schéma détaillé du pipeline est disponible dans :
 
+dashboard/pipeline_schema.png
+
+---
+
+## Principaux résultats obtenus
+
+- Nombre total de trajets analysés : 9 177 544
+- Recette totale observée : 171 948 024,90 $
+- Créneau le plus rentable : JEUDI-18
+- Courses suspectes détectées : 4 156
+- Paiement dominant : Carte bancaire
+- Vitesse moyenne observée : 22,3 km/h
+
+---
+
+## Analyses réalisées
+
+- Activité horaire des taxis
+- Analyse des moyens de paiement
+- Analyse des heures de pointe
+- Analyse des heures creuses
+- Évolution hebdomadaire des recettes
+- Analyse des vitesses moyennes
+- Identification des zones prioritaires
+- Détection des anomalies et trajets suspects
+
+---
+
+## Dashboard décisionnel
+
+Le dashboard interactif permet :
+
+- l'exploration des indicateurs clés ;
+- l'analyse des recettes ;
+- l'analyse du trafic ;
+- la détection des anomalies ;
+- l'export des données ;
+- la génération automatique d'un rapport PDF.
+
+Les captures d'écran sont disponibles dans :
+
+docs/screenshots/
+
+---
+
+## Rapport PDF
+
+Le rapport décisionnel généré automatiquement est disponible dans :
+
+dashboard/rapport_executif_nyc_taxi.pdf
+
+---
+
+## Compétences démontrées
+
+### Data Engineering
+
+- Hadoop HDFS
+- MapReduce
+- Hive
+- Traitement distribué
+
+### Data Analysis
+
+- Analyse exploratoire
+- KPI
+- Agrégations
+- Détection d'anomalies
+
+### Business Intelligence
+
+- Dashboarding
+- Reporting décisionnel
+- Data Visualization
+- Aide à la décision
+
+---
+
+## Auteur
+
+ANON Amoncou Diom Sébastien
+
+Matricule : ANOA171019790001
+
+Master 1 Bases de Données et Génie Logiciel
+
+Université Félix Houphouët-Boigny
+
+Abidjan - Côte d'Ivoire
+
+---
+
+## Démonstration vidéo
+
+https://www.youtube.com/watch?v=GsyqUfSC0bQ&t=68s
