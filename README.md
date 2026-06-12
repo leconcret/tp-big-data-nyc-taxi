@@ -121,6 +121,41 @@ Les captures d'écran sont disponibles dans :
 
 docs/screenshots/
 
+### Aperçu du Dashboard
+
+#### Vue générale du Dashboard
+
+![Dashboard](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.30.11.jpeg)
+
+#### Activité horaire des taxis
+
+![Activité horaire](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.30.08.jpeg)
+
+#### Analyse des moyens de paiement
+
+![Paiements](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.30.07.jpeg)
+
+#### Zones de départ prioritaires
+
+![Zones](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.30.04.jpeg)
+
+#### Heures de pointe vs heures creuses
+
+![Peak Off Peak](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.30.01.jpeg)
+
+#### Évolution hebdomadaire des recettes
+
+![Recettes](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.29.59.jpeg)
+
+#### Détection des anomalies
+
+![Anomalies](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.29.58.jpeg)
+
+#### Synthèse décisionnelle
+
+![Synthèse](docs/screenshots/WhatsApp%20Image%202026-06-10%20at%2009.29.56.jpeg)
+
+
 ---
 
 ## Rapport PDF
