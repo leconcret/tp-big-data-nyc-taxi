@@ -191,6 +191,39 @@ dashboard/rapport_executif_nyc_taxi.pdf
 
 ---
 
+## Architecture du projet
+
+```
+Dataset NYC Taxi
+        ↓
+      HDFS
+        ↓
+   MapReduce
+        ↓
+      Hive
+        ↓
+   Python / Flask
+        ↓
+ Dashboard BI
+        ↓
+ Rapport PDF
+```
+
+
+## Technologies utilisées
+
+- Hadoop 3.4.0
+- HDFS
+- MapReduce
+- Hive
+- Python
+- Flask
+- Plotly
+- Pandas
+- WSL Ubuntu
+- Git & GitHub
+
+
 ## Auteur
 
 ANON Amoncou Diom Sébastien
